@@ -100,8 +100,8 @@ class NetworkTest < Minitest::Test
     nbc = Network.new("NBC")
     nbc.add_show(knight_rider)
     nbc.add_show(parks_and_rec)
-      
-    nbc.actors_by_show
+
+    assert nbc.actors_by_show.keys.all? {|show| show.class == Show}
   end
 
 
