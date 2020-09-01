@@ -102,6 +102,8 @@ class NetworkTest < Minitest::Test
     nbc.add_show(parks_and_rec)
 
     assert nbc.actors_by_show.keys.all? {|show| show.class == Show}
+    assert_equal [["David Hasselhoff", "William Daniels"],["Amy Poehler", "Nick Offerman"]], nbc.actors_by_show.values
+    
   end
 
 
